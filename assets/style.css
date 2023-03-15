@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(117, 117, 192);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    max-width: 75%;
+    background-color: white;
+    font-size: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.btn {
+    display: grid;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.start-button {
+    display: grid;
+    gap: 10px;
+}
+
+#next {
+    font-size: 1.5rem;
+}
