@@ -14,6 +14,7 @@ body {
     align-items: center;
 }
 
+/* setup specs for the container */
 .container {
     width: 900px;
     max-width: 75%;
@@ -28,17 +29,41 @@ body {
     justify-content: space-around;
 }
 
+/* adjusted the questions line */
+#questions{
+    padding-bottom: 20px;
+}
+
+/* setup specs for the buttons */
 .btn {
     display: grid;
     gap: 15px;
     font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+/* added the coloriing to the button if the answer is right */
+.btn-correct {
+    background-color: green;
+}
+
+/* added coloring for if the answer is wrong */
+.btn-incorrect {
+    background-color: red;
 }
 
 .start-button {
     display: grid;
     gap: 10px;
+    border-radius: 10px;
 }
 
 #next {
     font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+/* added hide feature */
+.hide {
+    display: none;
 }
