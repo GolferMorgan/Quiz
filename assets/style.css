@@ -43,12 +43,12 @@ body {
 }
 
 /* added the coloriing to the button if the answer is right */
-.btn-correct {
+.correct {
     background-color: green;
 }
 
 /* added coloring for if the answer is wrong */
-.btn-incorrect {
+.incorrect {
     background-color: red;
 }
 
