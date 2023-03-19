@@ -1,9 +1,12 @@
 const startButton = document.getElementById('start')
 const nextButton = document.getElementById('next')
+const highScoresButton = document.getElementById('high-scores')
 const questionContainerElement = document.getElementById('question-container')
 let randomQuestions, currentQuestions
 const questionElement = document.getElementById('question')
 const answersElement = document.getElementById('answers')
+const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+let time = document.getElementById('#timer')
 
 //added start button to make the quiz start//
 startButton.addEventListener('click', start)
@@ -62,8 +65,10 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
     } else {
         //added high scores button
-        startButton.innerText = "High Scores"
-        startButton.classList.remove('hide')
+        highScoresButton.innerText = "High Scores"
+        highScoresButton.classList.add('hide')
+        highScoresButton.classList.remove('hide')
+        function formSubmission() {firstName.innerText (confirm('do you want to submit your score'))}
     }
 }
 
@@ -80,6 +85,10 @@ function clearStatusclass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 }
+
+//added score submission form//
+function formSubmission() {firstName.innerText (confirm('do you want to submit your score'))}
+
 //added questions and answers//
 const questions = [
     {
