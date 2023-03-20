@@ -7,7 +7,7 @@ var randomQuestions, currentQuestions
 var questionElement = document.getElementById('question')
 var answersElement = document.getElementById('answers')
 var timeEl = document.getElementById('time')
-var highScores = JSON.parse(localStorage.getItem('highScores')) || []
+
 var time = 60
 var timerEl
 var initials = document.getElementById('initials')
@@ -94,13 +94,6 @@ function countdown() {
     }
 }
 
-function endQuiz() {
-    clearInterval(timerEl)
-    questionContainerElement.style.display = 'none'
-}
-
-
-
 //added questions and answers//
 const questions = [
     {
@@ -137,15 +130,29 @@ const questions = [
         ]
     }
 ]
+//adding end page to submit scores//
+function endQuiz() {
+    clearInterval(timerEl)
+    questionContainerElement.style.display = 'none'
+        var highScores = {
+            initals: initials.value,
+            score: time
+        }
+        console.log(highScores);
+        localStorage.setItem('highScores', highScores);
+        var endPage = doucment.querySelector('end-page');
+        endPage.classList.remove('hide');
+    }
 
-var score = timeLeft 
-
-
-var highScores = {
-    initals: initials.value,
-    score: score.value
+function submitHighScores() {
+    var highScores = {
+        initials: initials.vlaue,
+        score: time
+    }
+    console.log(highScores);
+    localStorage.setItem('highScores', highScores);
 }
 
-localStorage.getItem('highScores');
-localStorage.setItem('highScores', highScores);
+submitButton.addEventListener('click', submitHighScores);
+
 
