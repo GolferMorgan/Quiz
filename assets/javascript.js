@@ -7,11 +7,11 @@ var randomQuestions, currentQuestions
 var questionElement = document.getElementById('question')
 var answersElement = document.getElementById('answers')
 var timeEl = document.getElementById('time')
-
 var time = 60
 var timerEl
 var initials = document.getElementById('initials')
 var score = document.getElementById('score')
+var submit = document.getElementById('end-page')
 
 //added start button to make the quiz start//
 startButton.addEventListener('click', start)
@@ -69,7 +69,7 @@ function selectAnswer(e) {
     })
     if (randomQuestions.length > currentQuestions +1) { 
     nextButton.classList.remove('hide')
-    }
+    } 
 }
 //added the correct and incorrct choices
 function setStatusClass(element, correct) {
@@ -85,13 +85,14 @@ function clearStatusclass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 }
-
+//set the countdown timer//
 function countdown() {
     time--
     timeEl.textContent = time;
     if (time <= 0)  {
         endQuiz()
-    }
+    } if (time >= questions)
+    endQuiz()
 }
 
 //added questions and answers//
@@ -143,7 +144,7 @@ function endQuiz() {
         var endPage = doucment.querySelector('end-page');
         endPage.classList.remove('hide');
     }
-
+//submit scores function
 function submitHighScores() {
     var highScores = {
         initials: initials.vlaue,
