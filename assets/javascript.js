@@ -2,9 +2,6 @@ const startButton = document.getElementById('start')
 const nextButton = document.getElementById('next')
 const highScoresButton = document.getElementById('high-scores')
 const questionContainerElement = document.getElementById('question-container')
-const scoreText= document.getElementById('score')
-const SCORE_POINTS = 100
-let score = 0 
 let randomQuestions, currentQuestions
 const questionElement = document.getElementById('question')
 const answersElement = document.getElementById('answers')
@@ -70,7 +67,7 @@ function selectAnswer(e) {
     highScores.classList.add('hide')
     }
 }
-
+//added the correct and incorrct choices
 function setStatusClass(element, correct) {
     clearStatusclass(element)
     if (correct) {

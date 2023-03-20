@@ -6,8 +6,9 @@ In this project we were suppose to build a quiz using HTML, CSS, AND JAVASCRIPT.
 
 ## Deployment
 Website
-
+https://golfermorgan.github.io/Quiz/
 
 GitHub Repo
+https://github.com/GolferMorgan/Quiz
 
 ## Screenshot
