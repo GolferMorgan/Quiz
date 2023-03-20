@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(117, 117, 192);
+    background-color: rgb(36, 36, 198);
     padding: 0;
     margin: 0;
     display: flex;
@@ -30,7 +30,7 @@ body {
 }
 
 /* adjusted the questions line */
-#questions{
+#question{
     padding-bottom: 20px;
 }
 
@@ -52,15 +52,33 @@ body {
     background-color: red;
 }
 
-.start-button {
+.start-btn {
     display: grid;
     gap: 10px;
     border-radius: 10px;
 }
 
+#start {
+    margin-left: .65rem;
+}
+
+#high-scores {
+    display: grid;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 1.50rem;
+    margin-top: 1rem;
+}
+
 #next {
     font-size: 1.5rem;
     border-radius: 10px;
+    margin-left: 2.5rem;
+}
+
+#score {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 /* added hide feature */

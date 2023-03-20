@@ -2,11 +2,14 @@ const startButton = document.getElementById('start')
 const nextButton = document.getElementById('next')
 const highScoresButton = document.getElementById('high-scores')
 const questionContainerElement = document.getElementById('question-container')
+const scoreText= document.getElementById('score')
+const SCORE_POINTS = 100
+let score = 0 
 let randomQuestions, currentQuestions
 const questionElement = document.getElementById('question')
 const answersElement = document.getElementById('answers')
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
-let time = document.getElementById('#timer')
+
 
 //added start button to make the quiz start//
 startButton.addEventListener('click', start)
@@ -22,6 +25,7 @@ function start() {
    startButton.classList.add('hide')
    randomQuestions = questions.sort(() => Math.random() - .5)
    currentQuestions = 0
+   score = 0
    questionContainerElement.classList.remove('hide')
    setNextQuestion()
 }
@@ -63,12 +67,7 @@ function selectAnswer(e) {
     })
     if (randomQuestions.length > currentQuestions +1) { 
     nextButton.classList.remove('hide')
-    } else {
-        //added high scores button
-        highScoresButton.innerText = "High Scores"
-        highScoresButton.classList.add('hide')
-        highScoresButton.classList.remove('hide')
-        function formSubmission() {firstName.innerText (confirm('do you want to submit your score'))}
+    highScores.classList.add('hide')
     }
 }
 
