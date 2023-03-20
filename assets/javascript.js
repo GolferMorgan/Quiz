@@ -1,12 +1,17 @@
-const startButton = document.getElementById('start')
-const nextButton = document.getElementById('next')
-const highScoresButton = document.getElementById('high-scores')
-const questionContainerElement = document.getElementById('question-container')
-let randomQuestions, currentQuestions
-const questionElement = document.getElementById('question')
-const answersElement = document.getElementById('answers')
-const highScores = JSON.parse(localStorage.getItem('highScores')) || []
-
+//added all my variables//
+var startButton = document.getElementById('start')
+var nextButton = document.getElementById('next')
+var highScoresButton = document.getElementById('high-scores')
+var questionContainerElement = document.getElementById('question-container')
+var randomQuestions, currentQuestions
+var questionElement = document.getElementById('question')
+var answersElement = document.getElementById('answers')
+var timeEl = document.getElementById('time')
+var highScores = JSON.parse(localStorage.getItem('highScores')) || []
+var time = 60
+var timerEl
+var initials = document.getElementById('initials')
+var score = document.getElementById('score')
 
 //added start button to make the quiz start//
 startButton.addEventListener('click', start)
@@ -25,12 +30,12 @@ function start() {
    score = 0
    questionContainerElement.classList.remove('hide')
    setNextQuestion()
+   timerEl = setInterval(countdown, 1000) 
 }
 //made the answees show up//
 function setNextQuestion() {
     resetState()
     showQuestion(randomQuestions[currentQuestions])
-
 }
 //made the question and answer portion visible and work correctly
 function showQuestion(question) {
@@ -64,7 +69,6 @@ function selectAnswer(e) {
     })
     if (randomQuestions.length > currentQuestions +1) { 
     nextButton.classList.remove('hide')
-    highScores.classList.add('hide')
     }
 }
 //added the correct and incorrct choices
@@ -82,8 +86,20 @@ function clearStatusclass(element) {
     element.classList.remove('incorrect')
 }
 
-//added score submission form//
-function formSubmission() {firstName.innerText (confirm('do you want to submit your score'))}
+function countdown() {
+    time--
+    timeEl.textContent = time;
+    if (time <= 0)  {
+        endQuiz()
+    }
+}
+
+function endQuiz() {
+    clearInterval(timerEl)
+    questionContainerElement.style.display = 'none'
+}
+
+
 
 //added questions and answers//
 const questions = [
@@ -121,3 +137,15 @@ const questions = [
         ]
     }
 ]
+
+var score = timeLeft 
+
+
+var highScores = {
+    initals: initials.value,
+    score: score.value
+}
+
+localStorage.getItem('highScores');
+localStorage.setItem('highScores', highScores);
+

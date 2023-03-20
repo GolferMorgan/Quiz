@@ -62,6 +62,10 @@ body {
     margin-left: .65rem;
 }
 
+#time {
+    text-align: center;
+}
+
 #high-scores {
     display: grid;
     gap: 10px;
@@ -78,6 +82,12 @@ body {
 
 #score {
     text-align: center;
+    margin-top: 1rem;
+}
+
+#save {
+    text-align: center;
+    margin-left: 2.3rem;
     margin-top: 1rem;
 }
 
