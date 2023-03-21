@@ -12,3 +12,4 @@ GitHub Repo
 https://github.com/GolferMorgan/Quiz
 
 ## Screenshot
+<img width="1467" alt="quiz" src="https://user-images.githubusercontent.com/124836497/226500926-70a0dc84-fab3-4949-8530-d6aa6a0f7410.png">
